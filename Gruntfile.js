@@ -12,10 +12,10 @@ SOFTWARESENI
 
 
 ==============================================================================================*/
-var library_obj = require('./js/library/library.json'),
-	js_obj = require('./js/main/js.json'),
-	css_desk_obj = require("./css/css-desktop.json"),
-	css_mobi_obj = require("./css/css-mobile.json");
+var library_obj = require('./config/js/library.json'),
+	js_obj = require('./config/js/js.json'),
+	css_desk_obj = require("./config/css/css-desktop.json"),
+	css_mobi_obj = require("./config/css/css-mobile.json");
 
 var library_arr = ['js/library/head.js'],
 	js_arr = ['js/library/.build/n-lab.js','js/main/head.js'],
@@ -163,8 +163,8 @@ SASS
 						style : 'expanded'
 					},
 					files: {
-					'css/desktop/compiled-sass-desktop.css': 'css/sass/desktop.scss', //use @import to concatenated all scss files
-					'css/mobile/compiled-sass-mobile.css': 'css/sass/mobile.scss'
+					'css/desktop/compiled-sass-desktop.css': 'config/sass/desktop.scss', //use @import to concatenated all scss files
+					'css/mobile/compiled-sass-mobile.css': 'config/sass/mobile.scss'
 					}
 				}
 			},
