@@ -550,6 +550,7 @@ n-lab
 		});
 	};
 }(jQuery));
+(function($, window, undefined){
 /*==============================================================================================
 
 MAIN
@@ -985,3 +986,5 @@ jQuery(document).ready(function($){
 		Main.onLoaded.init($);
 	});
 });
+
+})();

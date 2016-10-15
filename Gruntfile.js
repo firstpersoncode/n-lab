@@ -162,9 +162,20 @@ SASS
 					options: {
 						style : 'expanded'
 					},
-					files: {
-					'css/desktop/compiled-sass-desktop.css': 'config/sass/desktop.scss', //use @import to concatenated all scss files
-					'css/mobile/compiled-sass-mobile.css': 'config/sass/mobile.scss'
+					files: { //use @import to concatenated all scss files
+					'css/compiled/compiled-sass-desktop.css': 'config/sass/desktop.scss',
+					'css/compiled/compiled-sass-mobile.css': 'config/sass/mobile.scss'
+					}
+				}
+			},
+			less: { //less compiler
+				development: {
+					options: {
+						optimization: 2
+					},
+					files: { //use @import to concatenated all less files
+						'css/compiled/compiled-less-desktop.css' : 'config/less/desktop.less',
+						'css/compiled/compiled-less-mobile.css' : 'config/less/mobile.less'
 					}
 				}
 			},
@@ -199,8 +210,8 @@ MINIFY
 					tasks: ['concat:libs', 'concat:js'],
 				},
 				css: {
-					files: ['css/**/*.css', 'css/sass/**/*.scss'],
-					tasks: ['sass', 'concat:cssDesktop', 'concat:cssMobile'],
+					files: ['css/**/*.css', 'sass/**/*.scss', 'less/**/*.less'],
+					tasks: ['sass', 'less', 'concat:cssDesktop', 'concat:cssMobile'],
 				},
 			},
 		});
@@ -209,5 +220,7 @@ MINIFY
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.registerTask('default', ['sass', 'concat', 'watch']);
+	grunt.loadNpmTasks('grunt-contrib-less');
+
+	grunt.registerTask('default', ['sass', 'less', 'concat', 'watch']);
 };

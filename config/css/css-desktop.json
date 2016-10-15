@@ -2,7 +2,15 @@
   "development": [
     {
       "name": "sass-compiled",
-      "file": "css/desktop/compiled-sass-desktop.css"
+      "file": "css/compiled/compiled-sass-desktop.css"
+    },
+    {
+      "name": "less-compiled",
+      "file": "css/compiled/compiled-less-desktop.css"
+    },
+    {
+      "name": "loading-effect",
+      "file": "css/loading-effect.css"
     }
   ],
   "output": [

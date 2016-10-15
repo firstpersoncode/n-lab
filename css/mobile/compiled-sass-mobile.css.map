@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA;;gGAEgG;AAEhG,yBAA0B;EAEtB;;yCAEuC;EACvC,UAAW;IACP,OAAO,EAAE,KAAK;;EAEV,gBAAE;IACC,OAAO,EAAE,IAAI;;EAEhB,4BAAc;IACV,OAAO,EAAE,KAAK;;;EAK1B;;yCAEuC;EAEnC,aAAK;IACD,OAAO,EAAE,IAAI;;;EAIjB,mBAAI;IACA,OAAO,EAAE,IAAI;;EAEjB,sCAAuB;IACnB,OAAO,EAAE,KAAK;;;EAGtB,kCAAmC;IAC/B,OAAO,EAAE,eAAe",
-"sources": ["../../sass/mobile/767px.scss"],
-"names": [],
-"file": "compiled-sass-mobile.css"
-}

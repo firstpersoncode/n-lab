@@ -2,7 +2,11 @@
   "development": [
     {
       "name": "sass-compiled-mobile",
-      "file": "css/mobile/compiled-sass-mobile.css"
+      "file": "css/compiled/compiled-sass-mobile.css"
+    },
+    {
+      "name": "less-compiled-mobile",
+      "file": "css/compiled/compiled-less-mobile.css"
     }
   ],
   "output": [

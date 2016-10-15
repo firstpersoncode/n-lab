@@ -1,16 +1,5 @@
-(function($, window, undefined){
 /*==============================================================================================
-
-MAIN
-
+  core.scss
 ==============================================================================================*/
-var reinitTimer;
 
-var Main = {
-	
-	init : function($){
-
-		//run here :
-		Main.app.init($); //core
-		Main.prototype.init($); //test
-	},
+/*# sourceMappingURL=compiled-sass-desktop.css.map */
