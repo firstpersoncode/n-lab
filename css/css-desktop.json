@@ -1,0 +1,14 @@
+{
+  "development": [
+    {
+      "name": "sass-compiled",
+      "file": "css/desktop/compiled-sass-desktop.css"
+    }
+  ],
+  "output": [
+    {
+      "name": "styling",
+      "file": ".build/css/main-desktop.css"
+    }
+  ]
+}

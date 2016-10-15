@@ -1,0 +1,37 @@
+/*==============================================================================================
+767px.scss
+==============================================================================================*/
+@media (max-width: 767px) {
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  menu on mobile
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+  #offcanvas {
+    display: block;
+  }
+  #offcanvas ul ul {
+    display: none;
+  }
+  #offcanvas ul li.opened > ul {
+    display: block;
+  }
+
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  navbar
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+  #navbar .menu {
+    display: none;
+  }
+
+  .offcanvas-menu > * {
+    display: none;
+  }
+  .offcanvas-menu > .offcanvas-hamburger {
+    display: block;
+  }
+
+  .ss-slideshow .ss-browse .nav-text {
+    display: none !important;
+  }
+}
+
+/*# sourceMappingURL=compiled-sass-mobile.css.map */
