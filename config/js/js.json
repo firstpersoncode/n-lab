@@ -1,0 +1,26 @@
+{
+  "development": [
+    {
+      "name": "app",
+      "file": "js/main/files/app.js"
+    },
+    {
+      "name": "onResize",
+      "file": "js/main/files/onResize.js"
+    },
+    {
+      "name": "onLoad",
+      "file": "js/main/files/onLoad.js"
+    },
+    {
+      "name": "prototype",
+      "file": "js/main/files/prototype.js"
+    }
+  ],
+  "output": [
+    {
+      "name": "main-js",
+      "file": ".build/js/main.js"
+    }
+  ]
+}
