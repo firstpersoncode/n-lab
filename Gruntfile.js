@@ -1,30 +1,17 @@
-/*==============================================================================================
+/*
+==========================================================================================
 
-Grunt config
+HANDLE OUTPUT
 
-Nasser Maronie
-Front-End Developer
+==========================================================================================
+*/
 
-nasser@softwareseni.com
-softwareseni.com
+var js_obj = require('./js.json'),
+	css_obj = require('./css.json');
 
-SOFTWARESENI
-
-
-==============================================================================================*/
-var library_obj = require('./config/js/library.json'),
-	js_obj = require('./config/js/js.json'),
-	css_desk_obj = require("./config/css/css-desktop.json"),
-	css_mobi_obj = require("./config/css/css-mobile.json");
-
-var library_arr = ['js/library/head.js'],
-	js_arr = ['js/library/.build/n-lab.js','js/main/head.js'],
-	css_desk_arr = [];
-	css_mobi_arr = [];
-
-function LoopArr(obj, arr){// class for looping json object's array
-	this.files = arr;
-	this.output = [];	
+function LoopArr(obj){// class for looping json object's array
+	this.files = [];
+	this.dist = [];	
 	this.getFiles = function(){
 		for(var i = 0; i < obj.development.length; i++){
 			this.files.push(obj.development[i].file);
@@ -32,195 +19,261 @@ function LoopArr(obj, arr){// class for looping json object's array
 		}
 		return this.files;
 	}
-	this.getOutput = function(args){		
+	this.getOutput = function(){		
 		for(var i = 0; i < obj.output.length; i++){
-			this.output.push(obj.output[i].file);
+			this.dist.push(obj.output[i].file);
 			console.log('\x1b[32m%s\x1b[0m \n'+'\x1b[33m%s\x1b[0m \n', " - Merged: " + obj.output[i].name, " - Output: " + obj.output[i].file);
 		}
-		if(this.output.length <= 1){
-			return this.output.toString();
+		if(this.dist.length <= 1){
+			return this.dist.toString();
 		}else{
-			return this.output;
+			return this.dist;
 		}		
 	}	
 }
 
-var Library_list = new LoopArr(library_obj, library_arr),
-	Js_list = new LoopArr(js_obj, js_arr),
-	Css_desk_list = new LoopArr(css_desk_obj, css_desk_arr),
-	Css_mobi_list = new LoopArr(css_mobi_obj, css_mobi_arr);	
+var js_list = new LoopArr(js_obj),
+	css_list = new LoopArr(css_obj);
 
-Library_list.getFiles();
-Library_list.files.push("js/library/end.js");
-Js_list.getFiles();
-Js_list.files.push("js/main/end.js");
-
+	js_list.getOutput();
+	css_list.getOutput();
 
 module.exports = function (grunt) {
-	grunt
-		.initConfig({			
-			concat: { //concatenated small chunks of files into one file
-				
+
+	grunt.initConfig({			
+		concat: { //concatenated small chunks of files into one file
 /*
 ==========================================================================================
 
-JAVASCRIPT
-
-==========================================================================================
-*/ 
-				js: {
-					options: {
-						banner: 
-`/*==============================================================================================
-
-main.js 1.0.0
-
-Nasser Maronie
-Front-End Developer
-
-nasser@softwareseni.com
-softwareseni.com
-
-SOFTWARESENI
-
-==============================================================================================*/
-`
-					},
-					src: Js_list.files,
-					dest: Js_list.getOutput() //output file
-				},
-				libs: {
-					src: Library_list.files,
-					dest: Library_list.getOutput() //output file
-				},
-/*
-==========================================================================================
-
-CSS FOR DESKTOP
-
-==========================================================================================
-*/ 
-				cssDesktop: {
-					options: {
-						banner:
-`/*==============================================================================================
-
-main-desktop.css 1.0.0
-
-Nasser Maronie
-Front-End Developer
-
-nasser@softwareseni.com
-softwareseni.com
-
-SOFTWARESENI
-
-==============================================================================================*/
-` 
-					},
-					src: Css_desk_list.getFiles(),
-					dest: Css_desk_list.getOutput() //output file
-				},
-/*
-==========================================================================================
-
-CSS FOR MOBILE
-
-==========================================================================================
-*/ 
-				cssMobile: {
-					options: {
-						banner:
-`/*==============================================================================================
-
-main-mobile.css 1.0.0
-
-Nasser Maronie
-Front-End Developer
-
-nasser@softwareseni.com
-softwareseni.com
-
-SOFTWARESENI
-
-==============================================================================================*/
-` 
-					},
-					src: Css_mobi_list.getFiles(),
-					dest: Css_mobi_list.getOutput() //output file
-				}
-			},
-/*
-==========================================================================================
-
-SASS
+main.js output
 
 ==========================================================================================
 */
-			sass: { //sass compiler
-				dist: {
-					options: {
-						style : 'expanded'
-					},
-					files: { //use @import to concatenated all scss files
-					'css/compiled/compiled-sass-desktop.css': 'config/sass/desktop.scss',
-					'css/compiled/compiled-sass-mobile.css': 'config/sass/mobile.scss'
-					}
-				}
+			m: {
+				src: [
+					"development/.dist/modules.js"
+				],
+				dest: js_list.dist.toString() //output file
 			},
-			less: { //less compiler
-				development: {
-					options: {
-						optimization: 2
-					},
-					files: { //use @import to concatenated all less files
-						'css/compiled/compiled-less-desktop.css' : 'config/less/desktop.less',
-						'css/compiled/compiled-less-mobile.css' : 'config/less/mobile.less'
-					}
-				}
+			p_m: {
+				src: [
+					"development/.dist/plugins.js",
+					"development/.dist/modules.js",
+				],
+				dest: js_list.dist.toString() //output file
+			},
+			b_m: {
+				src: [
+					"modules/bootstrap/.dist/bootstrap.js",
+					"development/.dist/modules.js",
+				],
+				dest: js_list.dist.toString() //output file
+			},
+			j_m: {
+				src: [
+					"modules/jquery/dist/jquery.js",
+					"development/.dist/modules.js",
+				],
+				dest: js_list.dist.toString() //output file
+			},
+			b_p_m: {
+				src: [
+					"modules/bootstrap/.dist/bootstrap.js",
+					"development/.dist/plugins.js",
+					"development/.dist/modules.js",
+				],
+				dest: js_list.dist.toString() //output file
+			},
+			j_p_m: {
+				src: [
+					"modules/jqeury/dist/jquery.js",
+					"development/.dist/plugins.js",
+					"development/.dist/modules.js",
+				],
+				dest: js_list.dist.toString() //output file
+			},
+			j_b_m: {
+				src: [
+					"modules/jqeury/dist/jquery.js",
+					"modules/bootstrap/.dist/bootstrap.js",
+					"development/.dist/modules.js",
+				],
+				dest: js_list.dist.toString() //output file
+			},
+			j_b_p_m: {
+				src: [
+					"modules/jquery/dist/jquery.js",
+					"modules/bootstrap/.dist/bootstrap.js",
+					"development/.dist/plugins.js",
+					"development/.dist/modules.js",
+				],
+				dest: js_list.dist.toString() //output file
 			},
 /*
 ==========================================================================================
 
-MINIFY
+main.css output
 
 ==========================================================================================
 */
-			// cssmin: { //minify css file
-			// 	target: {
-			// 		files: [{
-			// 			expand: true,
-			// 			cwd: '.build/css',
-			// 			src: ['*.css', '!*.min.css'],
-			// 			dest: '.build/css',
-			// 			ext: '.min.css'
-			// 		}]
-			// 	}
-			// },
-			// uglify: { //minify js file
-			//     my_target: {
-			// 		files: {
-			// 			'.build/js/main.min.js': ['.build/js/main.js']
-			// 		}
-			//     }
-			// },
-		  	watch: {
-				js: {
-					files: ['js/**/*.js'],
-					tasks: ['concat:libs', 'concat:js'],
-				},
-				css: {
-					files: ['css/**/*.css', 'sass/**/*.scss', 'less/**/*.less'],
-					tasks: ['sass', 'less', 'concat:cssDesktop', 'concat:cssMobile'],
-				},
+			c:{
+				src: [
+					"development/.dist/custom.css",
+					"development/.dist/mobile.css"
+				],
+				dest: css_list.dist.toString()
 			},
-		});
+			s:{
+				src: [
+					"development/.dist/compiled-sass-custom.css",
+					"development/.dist/compiled-sass-mobile.css"
+				],
+				dest: css_list.dist.toString()
+			},
+			s_c:{
+				src: [
+					"development/.dist/compiled-sass-custom.css",					
+					"development/.dist/custom.css",
+					"development/.dist/compiled-sass-mobile.css",
+					"development/.dist/mobile.css"
+				],
+				dest: css_list.dist.toString()
+			},
+			b_s:{
+				src: [
+					"modules/bootstrap/.dist/bootstrap.css",
+					"development/.dist/compiled-sass-custom.css",
+					"development/.dist/compiled-sass-mobile.css"
+				],
+				dest: css_list.dist.toString()
+			},
+			b_c:{
+				src: [
+					"modules/bootstrap/.dist/bootstrap.css",
+					"development/.dist/custom.css",
+					"development/.dist/mobile.css"
+				],
+				dest: css_list.dist.toString()
+			},
+			b_s_c:{
+				src: [
+					"modules/bootstrap/.dist/bootstrap.css",
+					"development/.dist/compiled-sass-custom.css",					
+					"development/.dist/custom.css",
+					"development/.dist/compiled-sass-mobile.css",
+					"development/.dist/mobile.css"
+				],
+				dest: css_list.dist.toString()
+			},
+		},
+		cssmin: { //minify css file
+			target: {
+				files: [{
+					expand: true,
+					cwd: '.dist/',
+					src: ['*.css', '!*.min.css'],
+					dest: '.dist/',
+					ext: '.min.css'
+				}]
+			}
+		},
+		uglify: { //minify js file
+		    my_target: {
+				files: {
+					'.dist/main.min.js': ['.dist/main.js']
+				}
+		    }
+		},
+	});
+
 	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-less');
 
-	grunt.registerTask('default', ['sass', 'less', 'concat', 'watch']);
+	grunt.registerTask('default', ['concat', 'cssmin', 'uglify']);
+	grunt.registerTask('jquery-bootstrap-plugins-modules', 
+		[
+			'concat:j_b_p_m',
+			'uglify'
+		]
+	);
+	grunt.registerTask('bootstrap-plugins-modules', 
+		[
+			'concat:b_p_m',
+			'uglify'
+		]
+	);
+	grunt.registerTask('jquery-plugins-modules', 
+		[
+			'concat:j_p_m', 
+			'uglify'
+		]
+	);
+	grunt.registerTask('jquery-bootstrap-modules', 
+		[
+			'concat:j_b_m', 
+			'uglify'
+		]
+	);
+	grunt.registerTask('bootstrap-modules', 
+		[
+			'concat:b_m', 
+			'uglify'
+		]
+	);
+	grunt.registerTask('jquery-modules', 
+		[
+			'concat:j_m', 
+			'uglify'
+		]
+	);
+	grunt.registerTask('plugins-modules', 
+		[
+			'concat:p_m', 
+			'uglify'
+		]
+	);
+	grunt.registerTask('modules', 
+		[
+			'concat:m', 
+			'uglify'
+		]
+	);
+
+	grunt.registerTask('bootstrap-sass-css', 
+		[
+			'concat:b_s_c', 
+			'cssmin'
+		]
+	);
+	grunt.registerTask('bootstrap-sass', 
+		[
+			'concat:b_s', 
+			'cssmin'
+		]
+	);
+	grunt.registerTask('bootstrap-css', 
+		[
+			'concat:b_c', 
+			'cssmin'
+		]
+	);
+	grunt.registerTask('sass-css', 
+		[
+			'concat:s_c', 
+			'cssmin'
+		]
+	);
+	grunt.registerTask('sass', 
+		[
+			'concat:s', 
+			'cssmin'
+		]
+	);
+	grunt.registerTask('css', 
+		[
+			'concat:c', 
+			'cssmin'
+		]
+	);
 };
