@@ -1,0 +1,8 @@
+{
+  "output": [
+    {
+      "name": "main-css",
+      "file": ".dist/main.css"
+    }
+  ]
+}
