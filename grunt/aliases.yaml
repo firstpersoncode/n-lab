@@ -1,0 +1,7 @@
+default:
+- 'sass'
+- 'concat'
+- 'copy'
+- 'cssmin'
+- 'uglify'
+- 'watch'
