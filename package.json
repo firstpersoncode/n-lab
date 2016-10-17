@@ -1,7 +1,7 @@
 {
-  "name": "n-lab",
+  "name": "lab-development",
   "version": "1.0.0",
-  "description": "Nasser's work environtment",
+  "description": "develope css and js",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,13 @@
   "license": "ISC",
   "devDependencies": {
     "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^1.0.2",
-    "grunt-contrib-uglify": "^2.0.0"
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "load-grunt-config": "^0.19.2",
+    "load-grunt-tasks": "^3.5.2"
   },
   "dependencies": {
     "grunt": "^1.0.1"
