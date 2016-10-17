@@ -1,0 +1,8 @@
+{
+  "development": [
+    {
+      "name": "test",
+      "file": "_assets/js/custom/test.js"
+    }
+  ]
+}

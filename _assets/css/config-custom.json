@@ -1,0 +1,8 @@
+{
+  "development": [
+    {
+      "name": "loading-effect",
+      "file": "_assets/css/custom/loading-effect.css"
+    }
+  ]
+}
