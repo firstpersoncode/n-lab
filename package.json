@@ -1,6 +1,6 @@
 {
   "name": "lab-development",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "develope css and js",
   "main": "Gruntfile.js",
   "scripts": {

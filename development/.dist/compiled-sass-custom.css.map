@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA;;gGAEgG;ACFhG;;gGAEgG",
-"sources": ["../assets/sass/custom/core.scss","../assets/sass/custom/starting.scss"],
-"names": [],
-"file": "compiled-sass-custom.css"
-}
