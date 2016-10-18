@@ -60,7 +60,7 @@ dist
 		src : [
 			'.prebuild/sass.css',
 			'.prebuild/css.css'
-		]
+		],
 		dest: css_dist.dist.toString()
 	}
 };
