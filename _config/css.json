@@ -3,7 +3,7 @@
     {
       "name": "main-css",
       "file": ".dist/main.css",
-      "map": ".dist/map"
+      "sassmap": ".dist/sassmap"
     }
   ]
 }
