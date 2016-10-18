@@ -1,8 +1,0 @@
-{
-  "output": [
-    {
-      "name": "main-js",
-      "file": ".dist/main.js"
-    }
-  ]
-}
