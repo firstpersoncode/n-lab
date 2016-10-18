@@ -1,19 +1,6 @@
 /*==================================================================================================
   Project Name - Version 1.0.0
-  18/9/2016 12:49
-
-  This is some project
-  @2016 Nasser
-  website.com
-  nasser.maronie@gmail.com
-  SoftwareSeni
-
-  n-lab - 1.0.0
-==================================================================================================*/
-
-/*==================================================================================================
-  Project Name - Version 1.0.0
-  18/9/2016 12:49
+  18/9/2016 13:58
 
   This is some project
   @2016 Nasser
@@ -3348,15 +3335,12 @@ Developing and testing goes here..
 };
 
 jQuery(document).ready(function($){
-Module.init($);
-
+	Module.init($);
 	jQuery(window).resize(function($){
 	    Module.onResized.init($);
 	});
-
 	jQuery(window).on('load', function($){
 		Module.onLoaded.init($);
 	});
 });
-
 })();
