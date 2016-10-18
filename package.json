@@ -1,14 +1,15 @@
 {
-  "name": "lab-development",
-  "version": "2.0.0",
-  "description": "develope css and js",
+  "name": "n-lab",
+  "version": "1.0.0",
+  "description": "Front-end's work environtment",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "develope": "start _assets && grunt -v"
   },
   "author": "Nasser",
   "license": "ISC",
   "devDependencies": {
+    "grunt-banner": "^0.6.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^1.0.2",
