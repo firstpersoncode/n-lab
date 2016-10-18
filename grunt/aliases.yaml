@@ -60,14 +60,14 @@ css-only:
 - 'concat:cs'
 - 'copy'
 - 'cssmin'
--'usebanner:csb'
+- 'usebanner:csb'
 
 sass-only:
 - 'sass'
 - 'concat:sa'
 - 'copy'
 - 'cssmin'
--'usebanner:csb'
+- 'usebanner:csb'
 
 sass-css:
 - 'sass'
@@ -76,4 +76,4 @@ sass-css:
 - 'concat:cs_sa'
 - 'copy'
 - 'cssmin'
--'usebanner:csb'
+- 'usebanner:csb'
