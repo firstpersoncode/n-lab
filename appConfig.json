@@ -1,0 +1,11 @@
+{
+  "project": "Project Name",
+  "version": "1.0.0",
+  "description": "This is some project",
+  "author": {
+    "name":"Nasser",
+    "website":"website.com",
+    "email":"nasser.maronie@gmail.com",
+    "company":"SoftwareSeni"
+  }
+}
