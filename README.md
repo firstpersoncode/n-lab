@@ -151,6 +151,5 @@ grunt sass-css // concat files inside _assets/sass/custom, _assets/sass/mobile, 
 
 ## HAPPY CODING MY LORD !
 
-*Nasser*
 *first person code*
  
