@@ -100,8 +100,8 @@ dist
 	},
 	m_c: {
 		src: [
-			".prebuild/modules.js",
-			".prebuild/custom.js"
+			".prebuild/custom.js",
+			".prebuild/modules.js"			
 		],
 		dest: js_dist.dist.toString() //output file
 	},
@@ -115,8 +115,8 @@ dist
 	p_m_c: {
 		src: [
 			".prebuild/plugins.js",
-			".prebuild/modules.js",
-			".prebuild/custom.js"
+			".prebuild/custom.js",
+			".prebuild/modules.js"
 		],
 		dest: js_dist.dist.toString() //output file
 	},

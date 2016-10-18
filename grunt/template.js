@@ -23,17 +23,14 @@ modulesFooter = `
 };
 
 jQuery(document).ready(function($){
-Module.init($);
-
+	Module.init($);
 	jQuery(window).resize(function($){
 	    Module.onResized.init($);
 	});
-
 	jQuery(window).on('load', function($){
 		Module.onLoaded.init($);
 	});
 });
-
 })();
 `;
 
