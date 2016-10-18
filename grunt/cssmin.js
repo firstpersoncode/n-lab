@@ -6,15 +6,12 @@ MINIFY
 
 ==========================================================================================
 */	
-	options: {
-		sourceMap : true
-	},
 	target: {
 		files: [{
 			expand: true,
-			cwd: '.dist/',
+			cwd: '.dist',
 			src: ['*.css', '!*.min.css'],
-			dest: '.dist/min/',
+			dest: '.dist/min',
 			ext: '.min.css'
 		}]
 	}

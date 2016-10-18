@@ -15,7 +15,7 @@ WATCH
 			'newer:concat:plugins',
 			'newer:concat:custom',
 			'newer:concat:css_custom',
-			'newer:concat:css_mobile',
+			'newer:concat:css_mobile'
 		]
 	}
 };

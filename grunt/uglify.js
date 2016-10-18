@@ -9,9 +9,9 @@ UGLIFY
     my_target: {
       files: [{
           expand: true,
-          cwd: '.dist/',
+          cwd: '.dist',
           src: ['*.js', '!*.min.js'],
-          dest: '.dist/min/',
+          dest: '.dist/min',
           ext: '.min.js'
       }]
     }

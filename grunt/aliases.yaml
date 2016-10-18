@@ -11,34 +11,40 @@ plugins:
 - 'concat:plugins'
 - 'concat:p'
 - 'uglify'
+- 'usebanner:jsb'
 
 modules:
 - 'concat:modules'
 - 'concat:m'
 - 'uglify'
+- 'usebanner:jsb'
 
 custom:
 - 'concat:custom'
 - 'concat:c'
 - 'uglify'
+- 'usebanner:jsb'
 
 plugins-custom:
 - 'concat:plugins'
 - 'concat:custom'
 - 'concat:p_c'
 - 'uglify'
+- 'usebanner:jsb'
 
 modules-custom:
 - 'concat:modules'
 - 'concat:custom'
 - 'concat:m_c'
 - 'uglify'
+- 'usebanner:jsb'
 
 plugins-modules:
 - 'concat:plugins'
 - 'concat:modules'
 - 'concat:p_m'
 - 'uglify'
+- 'usebanner:jsb'
 
 plugins-modules-custom:
 - 'concat:plugins'
@@ -46,17 +52,22 @@ plugins-modules-custom:
 - 'concat:custom'
 - 'concat:p_m_c'
 - 'uglify'
+- 'usebanner:jsb'
 
 css-only:
 - 'concat:css_custom'
 - 'concat:css_mobile'
 - 'concat:cs'
 - 'cssmin'
+- 'copy'
+- 'usebanner:csb'
 
 sass-only:
 - 'sass'
 - 'concat:sa'
 - 'cssmin'
+- 'copy'
+- 'usebanner:csb'
 
 sass-css:
 - 'sass'
@@ -64,3 +75,5 @@ sass-css:
 - 'concat:css_mobile'
 - 'concat:cs_sa'
 - 'cssmin'
+- 'copy'
+- 'usebanner:csb'
