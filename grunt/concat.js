@@ -52,9 +52,6 @@ js
 		dest: ".prebuild/plugins.js" //output file
 	},
 	custom: {
-		options: {
-			banner: temp.custom
-		},
 		src: custom_list.getFiles(),
 		dest: ".prebuild/custom.js" //output file
 	},
