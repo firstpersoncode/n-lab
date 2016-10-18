@@ -1,4 +1,4 @@
-var css_target = require("../config/css.json");
+var css_target = require("../_config/css.json");
 module.exports = {
 	custom_map : {
 		expand : true,

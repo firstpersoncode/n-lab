@@ -3,8 +3,8 @@ var modules_obj = require('../_assets/js/config-modules.json'),
 	custom_obj = require('../_assets/js/config-custom.json'),
 	css_cust_obj = require("../_assets/css/config-custom.json"),
 	css_mobi_obj = require("../_assets/css/config-mobile.json"),
-	js_target = require("../config/js.json"),
-	css_target = require("../config/css.json");
+	js_target = require("../_config/js.json"),
+	css_target = require("../_config/css.json");
 
 var loop = require('./loopArr.js');
 
@@ -17,6 +17,9 @@ var modules_list = new loop(modules_obj);
 	js_dist = new loop(js_target);
 
 var temp = require('./template.js');
+
+js_dist.getOutput();
+css_dist.getOutput();
 
 module.exports = {
 /*
@@ -68,23 +71,79 @@ css
 		src: css_mobi_list.getFiles(),
 		dest: ".prebuild/mobile.css" //output file
 	},
-
-	js: {
+/*
+==========================================================================================
+dist
+==========================================================================================
+*/
+	p: {
+		src: [
+			".prebuild/plugins.js"
+		],
+		dest: js_dist.dist.toString() //output file
+	},
+	m: {
+		src: [
+			".prebuild/modules.js"
+		],
+		dest: js_dist.dist.toString() //output file
+	},
+	c: {
+		src: [
+			".prebuild/custom.js"
+		],
+		dest: js_dist.dist.toString() //output file
+	},
+	p_c: {
+		src: [
+			".prebuild/plugins.js",
+			".prebuild/custom.js"
+		],
+		dest: js_dist.dist.toString() //output file
+	},
+	m_c: {
+		src: [
+			".prebuild/modules.js",
+			".prebuild/custom.js"
+		],
+		dest: js_dist.dist.toString() //output file
+	},
+	p_m: {
+		src: [
+			".prebuild/plugins.js",
+			".prebuild/modules.js",
+		],
+		dest: js_dist.dist.toString() //output file
+	},
+	p_m_c: {
 		src: [
 			".prebuild/plugins.js",
 			".prebuild/modules.js",
 			".prebuild/custom.js"
 		],
-		dest: js_dist.getOutput() //output file
+		dest: js_dist.dist.toString() //output file
 	},
-	css: {
-		src: [
-			".prebuild/compiled-sass-custom.css",
-			".prebuild/compiled-sass-mobile.css",
+	cs: {
+		src: [		
 			".prebuild/custom.css",
 			".prebuild/mobile.css"
 		],
-		dest: css_dist.getOutput() //output file
+		dest: css_dist.dist.toString() //output file
+	},
+	sa: {
+		src: [
+			".prebuild/compiled-sass-custom.css",			
+			".prebuild/compiled-sass-mobile.css",
+		],
+		dest: css_dist.dist.toString() //output file
+	},
+	cs_sa: {
+		src: [
+			".prebuild/compiled-sass-custom.css",			
+			".prebuild/custom.css",
+			".prebuild/compiled-sass-mobile.css",
+			".prebuild/mobile.css"
+		],
+		dest: css_dist.dist.toString() //output file
 	}
-
 };

@@ -1,7 +1,66 @@
 default:
 - 'sass'
-- 'concat'
-- 'copy'
-- 'cssmin'
-- 'uglify'
+- 'newer:concat:modules'
+- 'newer:concat:plugins'
+- 'newer:concat:custom'
+- 'newer:concat:css_custom'
+- 'newer:concat:css_mobile'
 - 'watch'
+
+plugins:
+- 'concat:plugins'
+- 'concat:p'
+- 'uglify'
+
+modules:
+- 'concat:modules'
+- 'concat:m'
+- 'uglify'
+
+custom:
+- 'concat:custom'
+- 'concat:c'
+- 'uglify'
+
+plugins-custom:
+- 'concat:plugins'
+- 'concat:custom'
+- 'concat:p_c'
+- 'uglify'
+
+modules-custom:
+- 'concat:modules'
+- 'concat:custom'
+- 'concat:m_c'
+- 'uglify'
+
+plugins-modules:
+- 'concat:plugins'
+- 'concat:modules'
+- 'concat:p_m'
+- 'uglify'
+
+plugins-modules-custom:
+- 'concat:plugins'
+- 'concat:modules'
+- 'concat:custom'
+- 'concat:p_m_c'
+- 'uglify'
+
+css-only:
+- 'concat:css_custom'
+- 'concat:css_mobile'
+- 'concat:cs'
+- 'cssmin'
+
+sass-only:
+- 'sass'
+- 'concat:sa'
+- 'cssmin'
+
+sass-css:
+- 'sass'
+- 'concat:css_custom'
+- 'concat:css_mobile'
+- 'concat:cs_sa'
+- 'cssmin'
