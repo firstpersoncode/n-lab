@@ -5,10 +5,6 @@
       "file": "_assets/js/modules/init.js"
     },
     {
-      "name": "app",
-      "file": "_assets/js/modules/files/app.js"
-    },
-    {
       "name": "onResize",
       "file": "_assets/js/modules/files/onResize.js"
     },
