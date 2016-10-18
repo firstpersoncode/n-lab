@@ -1,6 +1,22 @@
 {
   "development": [
     {
+      "name": "bootstrap",
+      "file": "_assets/css/custom/bootstrap.css"
+    },
+    {
+      "name": "bootstrap-theme",
+      "file": "_assets/css/custom/bootstrap-theme.css"
+    },
+    {
+      "name": "font-awesome",
+      "file": "_assets/css/custom/font-awesome.css"
+    },
+    {
+      "name": "style-widget",
+      "file": "_assets/css/custom/style-widget.css"
+    },
+    {
       "name": "loading-effect",
       "file": "_assets/css/custom/loading-effect.css"
     }
