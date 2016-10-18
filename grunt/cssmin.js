@@ -5,7 +5,10 @@ module.exports = {
 MINIFY
 
 ==========================================================================================
-*/
+*/	
+	options: {
+		sourceMap : true
+	},
 	target: {
 		files: [{
 			expand: true,
