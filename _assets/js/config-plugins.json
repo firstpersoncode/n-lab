@@ -1,40 +1,8 @@
 {
   "development": [
     {
-      "name": "auto-scroll",
-      "file": "_assets/js/plugins/auto-scroll.js"
-    },
-    {
-      "name": "toggle-navbar",
-      "file": "_assets/js/plugins/toggle-navbar.js"
-    },
-    {
-      "name": "hoverdir",
-      "file": "_assets/js/plugins/hoverdir.js"
-    },
-    {
-      "name": "loading-effect",
-      "file": "_assets/js/plugins/loading-effect.js"
-    },
-    {
-      "name": "delegation",
-      "file": "_assets/js/plugins/delegation.js"
-    },
-    {
-      "name": "not-click",
-      "file": "_assets/js/plugins/not-click.js"
-    },
-    {
-      "name": "respond-to",
-      "file": "_assets/js/plugins/respond-to.js"
-    },
-    {
-      "name": "reponsive-pos",
-      "file": "_assets/js/plugins/reponsive-pos.js"
-    },
-    {
-      "name": "img-to-bg",
-      "file": "_assets/js/plugins/img-to-bg.js"
+      "name": "prototype",
+      "file": "_assets/js/plugins/prototype.js"
     }
   ]
 }

@@ -1,9 +1,5 @@
 {
   "development": [
-  	{
-  	  "name": "bootstrap",
-  	  "file": "_assets/js/custom/bootstrap.js"
-  	},
     {
       "name": "prototype",
       "file": "_assets/js/custom/prototype.js"
