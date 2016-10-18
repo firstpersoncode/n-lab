@@ -1,0 +1,28 @@
+/* Mobile */
+
+@media (max-width: 480px) {
+    #offcanvas {
+        display: block
+    }
+    #navbar .menu {
+        display: none
+    }
+    /* Offcanvas */
+    .offcanvas-menu > * {
+        display: none;
+    }
+    .offcanvas-menu > .offcanvas-hamburger {
+        display: block;
+        padding: 12px 0;
+    }
+    .ss-slideshow .ss-browse .nav-text {
+        display: none !important;
+    }
+    #offcanvas ul ul {
+        display: none;
+    }
+
+    #offcanvas ul li.opened > ul {
+        display: block;
+    }
+}
