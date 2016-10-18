@@ -8,7 +8,7 @@ var packages = require( '../package.json' ),
     mn = dt.getMinutes();
 
 module.exports = {
-  taskName: {
+  jsb: {
     options: {
       position: 'top',
       banner: `/*==================================================================================================
@@ -27,7 +27,29 @@ module.exports = {
       linebreak: true
     },
     files: {
-      src: [ '.dist/*.js', '.dist/*.css' ]
+      src: [ '.dist/*.js' ]
+    }
+  },
+  csb: {
+    options: {
+      position: 'top',
+      banner: `/*==================================================================================================
+  ${appConfig.project.toString()} - Version ${appConfig.version.toString()}
+  ${d}/${m}/${y} ${h}:${mn}
+
+  ${appConfig.description.toString()}
+  @${y} ${appConfig.author.name}
+  ${appConfig.author.website}
+  ${appConfig.author.email}
+  ${appConfig.author.company}
+
+  ${packages.name} - ${packages.version}
+==================================================================================================*/
+`,
+      linebreak: true
+    },
+    files: {
+      src: [ '.dist/*.css' ]
     }
   }
 };
