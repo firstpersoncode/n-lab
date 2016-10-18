@@ -105,8 +105,6 @@ Go to ```_config/``` folder, and set output target as ```JSON``` object in ```ou
 ```javascript
 // in node shell
 
-
-// Modules only :
 grunt javascript // concat js files inside _assets/js/files
 
 ```
