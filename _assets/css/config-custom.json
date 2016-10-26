@@ -1,8 +1,0 @@
-{
-  "development": [
-    {
-      "name": "custom",
-      "file": "_assets/css/custom/starting-custom.css"
-    }
-  ]
-}

@@ -1,0 +1,8 @@
+{
+  "output": {
+      "js_file": "main.js",
+      "js_path": ".dist",
+      "css_file": "main.css",
+      "css_path": "stylesheet"
+    }  
+}

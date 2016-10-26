@@ -1,0 +1,26 @@
+/*!
+ * =========================================================================
+ * 	Project Name 1.0.0
+ * 	stylesheet/main.css 10/20/2016, 5:36:28 PM
+ * 
+ * 	Description
+ * 
+ * Some another project using webpack
+ * 
+ * 	Nasser
+ * 	nasser.maronie@gmail.com
+ * 	website.com
+ * 	SoftwareSeni
+ * 	=========================================================================
+ */
+h1 {
+	width: 100%;
+	padding: 20px;
+	background: maroon;
+	text-align: center;
+	color: #fff;
+	font-family: arial;
+}body h1 {
+  background: green; }
+
+/*# sourceMappingURL=main.css.map*/

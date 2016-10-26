@@ -1,8 +1,0 @@
-{
-  "development": [
-  	{
-  	  "name": "mobile",
-  	  "file": "_assets/css/mobile/starting-mobile.css"
-  	}
-  ]
-}

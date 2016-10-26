@@ -1,7 +1,7 @@
 {
   "project": "Project Name",
   "version": "1.0.0",
-  "description": "This is some project",
+  "description": "Description\n\nSome another project using webpack",
   "author": {
     "name":"Nasser",
     "website":"website.com",
