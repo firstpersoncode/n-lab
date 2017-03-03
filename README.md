@@ -1,4 +1,4 @@
-# n-lab SS-Theme
+# Grunt.js SS-Theme
 ##### FE's work environtment
 
 
