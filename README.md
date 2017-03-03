@@ -1,4 +1,4 @@
-# n-lab Starter
+# Grunt.js Starter
 ##### FE's work environtment
 
 
@@ -10,7 +10,7 @@ Open your ```shell``` that has been set up for using node.js.
 
 Go to project's directory
 ```shell
-cd to/directory/project/n-lab
+cd to/directory/project/setup-gruntJS
 ```
 
 Install the module packages
