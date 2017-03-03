@@ -3,11 +3,13 @@
 
 
 ## Getting started :
+* Open your ```shell``` that has been set up for using node.js.
 * Install node.js
 * Install grunt.js
-
-Open your ```shell``` that has been set up for using node.js.
-
+* clone repo:
+```shell
+git clone https://github.com/firstpersoncode/setup-gruntJS.git
+```
 Go to project's directory
 ```shell
 cd to/directory/project/setup-gruntJS
