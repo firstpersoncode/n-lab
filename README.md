@@ -1,13 +1,15 @@
-# Grunt.js Starter
+# Grunt.js setup
 ##### FE's work environtment
 
 
 ## Getting started :
+* Open your ```shell``` that has been set up for using node.js.
 * Install node.js
 * Install grunt.js
-
-Open your ```shell``` that has been set up for using node.js.
-
+* clone repo:
+```shell
+git clone https://github.com/firstpersoncode/setup-gruntJS.git
+```
 Go to project's directory
 ```shell
 cd to/directory/project/setup-gruntJS
@@ -152,4 +154,3 @@ grunt sass-css // concat files inside _assets/sass/custom, _assets/sass/mobile, 
 ## HAPPY CODING MY LORD !
 
 *first person code*
- 
