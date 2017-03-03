@@ -1,4 +1,4 @@
-# n-lab
+# Grunt.js setup
 ##### FE's work environtment
 
 
